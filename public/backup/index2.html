@@ -5,37 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/main.css">
     
-    <title>Chatroom GLU</title>
+    <title>Chatter</title>
 </head>
 <body>
-    <header class="container-fluid top-header pt-2 pb-2 mb-3">
-        <h1 class="display-4 text-center">Enter chatbox</h1>
-    </header>
-    <div class="container mt-3">
+    <div class="container-fluid">
         <div class="row">
             <div class="col">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control _userName" placeholder="Nickname" aria-label="Nickname" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-secondary _saveUserName" type="button">Save</button>
-                    </div>
+                <div class="jumbotron">
+                    <h1 class="display-4">Tech space chatter</h1>
+                    <p class="lead">Select which room you'd like to join below!!</p>
                 </div>
             </div>
         </div>
-    </div>
-    
-    <div class="container-fluid bottom-header">
-        <footer>
-            <div class="row">
-                <div class="col">
-                </div>
+        <div class="row">
+            <div class="col">
+                <ul class="list-group">
+                    <a href="/javascript" class="list-group-item list-group-item-action">Javascript</a>
+                    <a href="/swift" class="list-group-item">Swift</a>
+                    <a href="/css" class="list-group-item">CSS</a>
+                </ul>
             </div>
-        </footer>
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="assets/main.js"></script>
 </body>
 </html>
