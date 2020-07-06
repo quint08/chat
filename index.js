@@ -20,19 +20,19 @@ app.get('/rooms', (req, res) => {
 });
 
 
-app.get('/chillout-place', (req, res) => {
+app.get('/general', (req, res) => {
     res.sendFile(__dirname + '/public/chatroom.html');
 });
 
-app.get('/nightlife', (req, res) => {
+app.get('/code', (req, res) => {
     res.sendFile(__dirname + '/public/chatroom.html');
 });
 
-app.get('/series-movies', (req, res) => {
+app.get('/design', (req, res) => {
     res.sendFile(__dirname + '/public/chatroom.html');
 });
 
-app.get('/sports', (req, res) => {
+app.get('/marketing', (req, res) => {
     res.sendFile(__dirname + '/public/chatroom.html');
 });
 

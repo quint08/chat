@@ -4,7 +4,7 @@ import './scss/style.scss';
 var url = window.location.href;
 var roomArr = url.split('/');
 var roomName = roomArr[roomArr.length-1];
-var validRooms = ["chillout-place", "nightlife", "series-movies", "sports"];
+var validRooms = ["general", "code", "design", "marketing"];
 var isCurrentRoom = validRooms.includes(roomName);
 
 if (isCurrentRoom) {
@@ -31,9 +31,9 @@ if (isCurrentRoom) {
         let user = localStorage.getItem('userName');
 
         if(user == data.user){
-            $('#messages').append($('<li class="mine">').text(data.user+" <br> "+data.msg));
+            $('#messages').append("<li class='mine'><b>"+data.user+"</b><br>" +data.msg+ "<a class='time'>now</a>"+"</li>");
         }else{
-            $('#messages').append($('<li class="other">').text(data.user+"<br>"+data.msg));
+            $('#messages').append("<li class='other'><b>"+data.user+"</b><br>" +data.msg+ "<a class='time'>now</a>"+"</li>");
         }
 
     });
@@ -47,9 +47,9 @@ if (isCurrentRoom) {
 
         for (var i = 0; i < data.length; i++) {
             if(user == data[i].user_name){
-                $('#messages').append($('<li class="mine">').text(data[i].user_name+ "<br>" +data[i].chat_text));
+                $('#messages').append("<li class='mine'><b>"+data[i].user_name+"</b><br>" +data[i].chat_text+"<a class='time'>"+data[i].date_time+ "</a>"+"</li>");
             }else{
-                $('#messages').append($('<li class="other">').text(data[i].user_name+"<br>"+data[i].chat_text));
+                $('#messages').append("<li class='other'><b>"+data[i].user_name+"</b><br>" +data[i].chat_text+"<a class='time'>"+data[i].date_time+ "</a>"+"</li>");
             }
         }
 
