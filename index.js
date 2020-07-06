@@ -19,25 +19,25 @@ app.get('/rooms', (req, res) => {
     res.sendFile(__dirname + '/public/rooms.html'); 
 });
 
+app.get('/exit', (req, res) => {
+    res.sendFile(__dirname + '/public/exit.html'); 
+});
 
-app.get('/chillout-place', (req, res) => {
+
+app.get('/general', (req, res) => {
     res.sendFile(__dirname + '/public/chatroom.html');
 });
 
-app.get('/nightlife', (req, res) => {
+app.get('/developing', (req, res) => {
     res.sendFile(__dirname + '/public/chatroom.html');
 });
 
-app.get('/series-movies', (req, res) => {
+app.get('/design', (req, res) => {
     res.sendFile(__dirname + '/public/chatroom.html');
 });
 
-app.get('/sports', (req, res) => {
+app.get('/marketing', (req, res) => {
     res.sendFile(__dirname + '/public/chatroom.html');
-});
-
-app.get('/users', (req, res) => {
-    res.sendFile(__dirname + '/public/users.html');
 });
 
 // tech namespace

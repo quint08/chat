@@ -46,17 +46,8 @@ const insertChats = (request) => {
     })
 }
 
-const getUsers = (request, response) => {
-    client.query('SELECT user_name FROM chats', (error, results) => {
-      if (error) {
-        throw error
-      }
-    })
-  }
-
 module.exports = {
     getChats,
     insertChats,
-    checkUser,
-    getUsers
+    checkUser
 }

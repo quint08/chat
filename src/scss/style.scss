@@ -1,4 +1,4 @@
-@import "node_modules/bootstrap/dist/css/bootstrap";
+
 @import "fontawesome/fontawesome.scss";
 @import "fontawesome/fa-solid.scss";
 @import "_variables";
@@ -9,10 +9,15 @@ body{
     background-color:$background;
 }
 
+.goodbye {
+    margin: 0 auto;
+}
+
 .top-header{
-    background-color:$header;
+    background-color: #1F1F1F;
     border-radius:0 0 30px 30px;
     color:$font-white;
+
 }
 
 .c-bg {
@@ -22,10 +27,13 @@ body{
 .bottom-header{
     position: fixed;
     bottom:0; 
-    background-color:$header;
+    background-color: #1F1F1F;
     border-radius:30px 30px 0 0;
-    color:#000;
+    color:$font-white;
     min-height:50px;
+}
+.intro {
+    color: #fff;
 }
 
 a.list-group-item{
@@ -71,4 +79,26 @@ a.list-group-item{
 			display: none;
 		}
 	}
+}
+
+.room-but {
+    width: 8%;
+    height: 40px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: $chat-blue;
+    color: white;
+}
+.room-but:hover {
+    border: 2px white solid;
+}
+.exit-but {
+    width: 7%;
+    height: 60px;
+    height: 40px;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: $background;
+    color: black;
+    float: right;
 }

@@ -4,7 +4,7 @@ import './scss/style.scss';
 var url = window.location.href;
 var roomArr = url.split('/');
 var roomName = roomArr[roomArr.length-1];
-var validRooms = ["chillout-place", "nightlife", "series-movies", "sports"];
+var validRooms = ["general", "developing", "design", "marketing"];
 var isCurrentRoom = validRooms.includes(roomName);
 
 if (isCurrentRoom) {
@@ -69,17 +69,4 @@ $( document ).ready(function() {
 
         window.location.href = '/rooms';
     });
-});
-
-socket.on('allusers', (data) => {
-    let user = localStorage.getItem('userName');
-
-    for (var i = 0; i < data.length; i++) {
-        if(user == data[i].user_name){
-            $('#users').append($('<li class="mine">').text(data[i].user_name));
-        }else{
-            $('#users').append($('<li class="other">').text(data[i].user_name));
-        }
-    }
-
 });
