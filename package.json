@@ -1,7 +1,7 @@
 {
-  "name": "chat",
+  "name": "chatter",
   "version": "1.0.0",
-  "description": "chatApp",
+  "description": "Installation:",
   "main": "index.js",
   "scripts": {
     "start": "nodemon ./index.js --exec",
@@ -9,16 +9,8 @@
     "test": "DEBUG=* nodemon ./index.js --exec babel-node -e js",
     "dev": "npm run start-dev && npx webpack"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/quint08/chat.git"
-  },
-  "author": "quinten fisser",
+  "author": "Quinten Fisser",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/quint08/chat/issues"
-  },
-  "homepage": "https://github.com/quint08/chat#readme",
   "dependencies": {
     "bootstrap": "^4.5.0",
     "bootstrap-sass": "^3.4.1",
@@ -46,5 +38,13 @@
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.11.0",
     "webpack-stream": "^5.2.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quint08/chat.git"
+  },
+  "bugs": {
+    "url": "https://github.com/quint08/chat/issues"
+  },
+  "homepage": "https://github.com/quint08/chat#readme"
 }

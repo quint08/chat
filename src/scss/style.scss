@@ -1,39 +1,31 @@
-
+@import "node_modules/bootstrap/dist/css/bootstrap";
 @import "fontawesome/fontawesome.scss";
 @import "fontawesome/fa-solid.scss";
 @import "_variables";
 @import "_mixins";
+@import "fontawesome/fa-regular.scss";
 
  
 body{
-    background-color:$background;
-}
-
-.goodbye {
-    margin: 0 auto;
+    background-color: $background;
 }
 
 .top-header{
-    background-color: #1F1F1F;
+    background-color: $header;
     border-radius:0 0 30px 30px;
     color:$font-white;
-
 }
-
-.c-bg {
-    background-color: #E3E3E3;
+.topspace {
+    margin-top: 150px;
 }
 
 .bottom-header{
     position: fixed;
     bottom:0; 
-    background-color: #1F1F1F;
+    background-color:$header;
     border-radius:30px 30px 0 0;
     color:$font-white;
-    min-height:50px;
-}
-.intro {
-    color: #fff;
+    min-height:100px;
 }
 
 a.list-group-item{
@@ -52,18 +44,69 @@ a.list-group-item{
     padding-bottom: 60px;
 }
 
+.myinput {
+    background-color: #3c3c3c;
+    border-radius: 30px;
+}
+.myinput-chat {
+    background-color: #3c3c3c;
+    border-radius: 30px;
+    border: 0;
+}
+
+.marg-top {
+    margin-top: 20px;
+}
+
+.next-but{
+    background-color: greenyellow;
+    border-radius: 100px;
+}
+.next-but-chat{
+    background-color: greenyellow;
+    border-radius: 100px;
+}
+
+.rooms-back {
+    background-color: #3e3e3e;
+}
+
+.quick-but {
+    background-color: greenyellow;
+    color: white;
+    width: 7%;
+    padding: 5px;
+    border-radius: 20px;
+    margin: 5px;
+}
+.quick-but:hover {
+    background-color: $background;
+}
+.txt-clr{
+    color: #3e3e3e;
+}
+.txt-clr:hover{
+    text-decoration: none;
+    color: #3e3e3e;
+}
+
 #messages {
 
     li{
         padding:5px;
         list-style: none;
+        width: 50%;
+        margin: 10px;
+        border-radius: 5px;
         &.other{
             background-color:$chat-black;
             color:$font-white;
+            float: left;
             
         }
         &.mine{
             background-color:$chat-blue;
+            float: right;
         }
     }
 }
@@ -79,26 +122,4 @@ a.list-group-item{
 			display: none;
 		}
 	}
-}
-
-.room-but {
-    width: 8%;
-    height: 40px;
-    padding: 10px;
-    border-radius: 15px;
-    background-color: $chat-blue;
-    color: white;
-}
-.room-but:hover {
-    border: 2px white solid;
-}
-.exit-but {
-    width: 7%;
-    height: 60px;
-    height: 40px;
-    border-radius: 15px;
-    padding: 10px;
-    background-color: $background;
-    color: black;
-    float: right;
 }

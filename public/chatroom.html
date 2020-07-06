@@ -4,23 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <title>Chatroom: {{room}}</title>
 </head>
 <body>
     <header class="container-fluid top-header pt-2 pb-2 mb-3">
         <div class="row">
-            <div class="col-3">
-              <h1 class="display-5">Chatroom - <span class="room-name"></span></h1>
+            <div class="col-4">
+              <h1 class="display-5">Chatroom: <span class="room-name"></span></h1>
             </div>
             <nav class="col-9">
-                <a href="/rooms">
-                  <div class="room-but">Rooms</div>
-                </a>
-                <a href="/exit" class="alternate">
-                  <div class="exit-but">Quit</div>
-                </a>
+              <ul>
+                <div class="quick-but"><a class="txt-clr" href="/rooms">Rooms</a></div>
+                  <div class="quick-but"><a class="txt-clr" href="/" class="alternate">Quit</a></div>
+              </ul>
             </nav>
         </div>
     </header>
@@ -31,17 +28,16 @@
           </div>
     
         </div>
-        
       </div>
       <footer class="container-fluid bottom-header">
         <div class="row">
           <div class="col">
             <form action="">
-              <div class="input-group mb-3">
-                <input id="m" autocomplete="off" type="text" class="form-control" placeholder="Message..."
+              <div class="input-group marg-top mb-3">
+                <input id="m" autocomplete="off" type="text" class="form-control myinput-chat" placeholder="Message..."
                   aria-label="Message..." aria-describedby="button-addon2" />
                 <div class="input-group-append">
-                  <button class="btn btn-outline-secondary btn-chat" type="submit" id="button-addon2">
+                  <button class="btn next-but-chat" type="submit" id="button-addon2">
                     Send
                   </button>
                 </div>
@@ -55,7 +51,5 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="assets/main.js"></script>
-    <script>
-    </script>
 </body>
 </html>

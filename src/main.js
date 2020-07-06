@@ -4,7 +4,7 @@ import './scss/style.scss';
 var url = window.location.href;
 var roomArr = url.split('/');
 var roomName = roomArr[roomArr.length-1];
-var validRooms = ["general", "developing", "design", "marketing"];
+var validRooms = ["chillout-place", "nightlife", "series-movies", "sports"];
 var isCurrentRoom = validRooms.includes(roomName);
 
 if (isCurrentRoom) {
@@ -31,9 +31,9 @@ if (isCurrentRoom) {
         let user = localStorage.getItem('userName');
 
         if(user == data.user){
-            $('#messages').append($('<li class="mine">').text(data.msg+' - '+data.user));
+            $('#messages').append($('<li class="mine">').text(data.user+" <br> "+data.msg));
         }else{
-            $('#messages').append($('<li class="other">').text(data.msg+' - '+data.user));
+            $('#messages').append($('<li class="other">').text(data.user+"<br>"+data.msg));
         }
 
     });
@@ -47,9 +47,9 @@ if (isCurrentRoom) {
 
         for (var i = 0; i < data.length; i++) {
             if(user == data[i].user_name){
-                $('#messages').append($('<li class="mine">').text(data[i].chat_text+' - '+data[i].user_name));
+                $('#messages').append($('<li class="mine">').text(data[i].user_name+ "<br>" +data[i].chat_text));
             }else{
-                $('#messages').append($('<li class="other">').text(data[i].chat_text+' - '+data[i].user_name));
+                $('#messages').append($('<li class="other">').text(data[i].user_name+"<br>"+data[i].chat_text));
             }
         }
 

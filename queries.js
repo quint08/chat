@@ -1,4 +1,12 @@
+// CREATE TABLE chats (
+//     user_id SERIAL PRIMARY KEY,
+//     user_name VARCHAR(255),
+//     room VARCHAR(255),
+//     chat_text TEXT,
+//     date_time TIMESTAMP
+// );
 
+// SELECT * FROM chats;
 const pg = require('pg');
 const process_db = require('dotenv').config();
 const db_url = process.env.DATABASE_URL || process_db.parsed.DB_URL;

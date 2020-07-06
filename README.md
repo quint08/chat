@@ -1,2 +1,3 @@
-chat
-https://chat-glu.herokuapp.com/
+Installation:
+
+`npm install`
